@@ -56,3 +56,12 @@ MirwaldMaturity <- function(age, bodymass, stature, sittingheight) {
     (0.02293 * weight_height_ratio)
   
 }  
+
+##Determines if Early/Average/Late maturer.
+Maturation_status <- function(age_at_phv){
+  
+  case_when(age_at_phv < 13 ~ "Early",
+            age_at_phv >= 13 & age_at_phv <= 15 ~ "Average",
+            age_at_phv > 15 ~ 'Late')
+}
+
