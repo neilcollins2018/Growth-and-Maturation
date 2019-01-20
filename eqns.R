@@ -44,7 +44,8 @@ FransenMaturityRatio <- function(age, bodymass, stature, sittingheight) {
 ### Returns time from PHV
 # Based on Mirwald et al. (2002). An assessment of maturity from anthropometric
 # measurements.
-MirwaldMaturity <- function(age, bodymass, stature, sittingheight) {
+####Male Version
+MirwaldMaturityMale <- function(age, bodymass, stature, sittingheight) {
   
   leglenth <- stature - sittingheight
   weight_height_ratio <- (bodymass / stature) * 100
@@ -56,6 +57,22 @@ MirwaldMaturity <- function(age, bodymass, stature, sittingheight) {
     (0.02293 * weight_height_ratio)
   
 }  
+
+####Female Version
+MirwaldMaturityFemale <- function(age, bodymass, stature, sittingheight) {
+  
+  leglenth <- stature - sittingheight
+  weight_height_ratio <- (bodymass / stature) * 100
+  
+  -9.376 + 
+    (0.0001882 * (leglenth * sittingheight)) +
+    (0.0022 * (age * leglenth)) +
+    (0.005841 * (age * sittingheight)) +
+    (0.002658 * (age * bodymass)) +
+    (0.07693 * weight_height_ratio)
+  
+}  
+
 
 ##Determines if Early/Average/Late maturer.
 Maturation_status <- function(age_at_phv){
