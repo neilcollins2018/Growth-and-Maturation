@@ -5,6 +5,7 @@
 library(tidyverse)
 library(data.table)
 
+###Sample data
 df <- structure(list(PlayerName = c("Example", "Example1"), 
                      DateOfBirth = structure(c(1069113600, 1095465600), 
                                              class = c("POSIXct", "POSIXt"), 
@@ -21,6 +22,7 @@ df <- structure(list(PlayerName = c("Example", "Example1"),
                      maturation_status = c("Average", "Average")), 
                 class = c("data.table", "data.frame"), row.names = c(NA, -2L))
 
+###Sherar reference for males
 Sherar_ref_male <- structure(list(year_from_phv = c(-4, -3.8, -3.6, -3.4, -3.2, 
                                                     -3, -2.8, -2.6, -2.4, -2.2, -2, -1.8, -1.6, -1.4, -1.2, -1, -0.8, 
                                                     -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 
@@ -64,7 +66,7 @@ Sherar_ref_male <- structure(list(year_from_phv = c(-4, -3.8, -3.6, -3.4, -3.2,
                                          "9.7100000000000009",  "8.27", "6.94", "5.7", "4.54", "3.51", "2.64", "1.92", "1.35", "0.91", 
                                          "0.57999999999999996", "0.32", "0.13", "0", "0", "0", "0", "0", "0")), 
                              row.names = c(NA, -123L), class = c("tbl_df", "tbl", "data.frame"))
-
+###Sherar reference for females
 Sherar_ref_female <- structure(list(year_from_phv = c(-4, -3.8, -3.6, -3.4, -3.2, -3, -2.8, -2.6, -2.4, -2.2, -2, -1.8, -1.6, 
                                                       -1.4, -1.2, -1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2,
                                                       1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, -4, -3.8,
