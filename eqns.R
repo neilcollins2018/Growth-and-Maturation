@@ -73,6 +73,38 @@ MirwaldMaturityFemale <- function(age, bodymass, stature, sittingheight) {
   
 }  
 
+###From: Modified Maturity Offset Prediction Equations: Validation in Independent Longitudinal Samples of Boys and Girls (Koziel & Malina, 2018)
+###Moore Equation for females
+Moore_female <- function(age, stature) {
+
+  -7.709133 +
+    (0.0042232 * 
+       (age * stature)
+     )
+  
+}
+
+###Moore Equation for males (1)
+Moore_male_1 <- function(age, sittingheight) {
+  
+  -8.8128741 +
+    (0.0070346 * 
+       (age * sittingheight)
+    )
+  
+}
+
+###Moore Equation for males (2)
+Moore_male_2 <- function(age, stature) {
+  
+  -7.999994 +
+    (0.0036124 * 
+       (age * stature)
+    )
+  
+}
+
+
 
 ##Determines if Early/Average/Late maturer.
 Maturation_status <- function(age_at_phv){
