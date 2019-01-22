@@ -11,11 +11,11 @@
   * Franson et al (2017) Maturity Ratio (Male only)
   * Mirwald et al (2002) Maturity Assessment (Male and Female)
   * Koziel & Malina (2018) Moore Maturity offset (2 Male versions and single female)
-  * Function which returns maturation status (Early/Average/Later) based off age at PHV
+  * Function which returns maturation status (Early/Average/Late) based off age at PHV
   
  ### Sherar et al (2005) script:
   
   * Includes sample data to run analyses
-  * Male and female reference tables in script (If using regularly, save as external .csv and import when needed)
+  * Male and female reference tables in script (If using regularly, save as external `.csv` and import when needed)
   * Analyses performed using `data.table` package and rolling joins
   
